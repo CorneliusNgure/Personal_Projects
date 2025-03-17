@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title">Survey: School Management System</h1>
+    <p id="description">Thank you for taking time to provide us with honest feedback. This will go a long way to helping us improve the system to suit your needs.</p>
+
+    <form id="survey-form">
+      <label for="name" id="name-label">Your name: 
+        <input id="name" type="text" placeholder="Name" required>
+      </label>
+
+      <label for="email" id="email-label">Your email: 
+        <input id="email" type="email" placeholder="Email" required>
+      </label>
+
+      <label for="number" id="number-label">Your age: 
+        <input id="number" type="number" min="13" max="120" placeholder="Age">
+      </label>
+
+      <label for="dropdown">Would you visit this website again?</label>
+      <select id="dropdown" required>
+        <option value="">Choose one</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Maybe">Maybe</option>
+      </select>
+
+      <label for="satisfaction">How satisfied are you with our school management system?</label>
+      <label for="very-satisfied">
+        <input type="radio" id="very-satisfied" name="satisfaction" required value="Very Satisfied"> ⭐⭐⭐⭐⭐ (Very Satisfied)
+      </label>
+      <label for="satisfied">
+        <input type="radio" id="satisfied" name="satisfaction" required value="Satisfied"> ⭐⭐⭐⭐ (Satisfied)
+      </label>
+      <label for="neutral">
+        <input type="radio" id="neutral" name="satisfaction" required value="Neutral"> ⭐⭐⭐ (Neutral)
+      </label>
+      <label for="dissatisfied">
+        <input type="radio" id="dissatisfied" name="satisfaction" required value="Dissatisfied"> ⭐⭐ (Dissatisfied)
+      </label>
+      <label for="very-dissatisfied">
+        <input type="radio" id="very-dissatisfied" name="satisfaction" required value="Very Dissatisfied"> ⭐ (Very Dissatisfied)
+      </label>
+
+      <label for="useful-feature">Which features did you find most useful? (Check all that apply)</label>
+      <label for="dashboard">
+        <input id="dashboard" type="checkbox" name="useful-feature" value="Dashboard"> Dashboard
+      </label>
+      <label for="examination">
+        <input id="examination" type="checkbox" name="useful-feature" value="Examination"> Examination
+      </label>
+      <label for="finance">
+        <input id="finance" type="checkbox" name="useful-feature" value="Finance"> Finance
+      </label>
+      <label for="timetable">
+        <input id="timetable" type="checkbox" name="useful-feature" value="Timetable"> Timetable
+      </label>
+      <label for="messaging">
+        <input id="messaging" type="checkbox" name="useful-feature" value="Messaging"> Messaging
+      </label>
+      <label for="others">
+        <input id="others" type="checkbox" name="useful-feature" value="Others"> Others
+      </label>
+
+      <label for="suggestions">What improvements would you suggest?</label>
+      <textarea id="suggestions" name="suggestions" rows="5" cols="30" placeholder="Write your suggestions here..."></textarea>
+
+      <button type="submit" id="submit">Submit Feedback</button>
+    </form>
+  </body>
+</html>
