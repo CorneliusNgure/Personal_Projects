@@ -1,0 +1,120 @@
+body {
+    background-color: #121212;
+    font-family: 'Courier New', monospace;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    font-size: 18px;
+    margin: 0;
+}
+
+label {
+    display: block;
+    margin: 1rem 0;
+    
+}
+
+#title, #description  {
+    margin: 0.5em auto;
+    text-align: center;
+    /* border-bottom: white solid; */
+    /* padding-top: 10px;  */
+    width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+    
+}
+
+#description {
+    text-align: left;
+    line-height: 1.5;
+    padding-bottom: 20px ;
+    border-bottom: none;
+    text-shadow: none;
+    color: white;
+
+}
+
+#survey-form {
+    margin: 0 auto;
+    width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    background: rgb(26, 26, 26 0.9);
+    box-shadow: 0 0 15px #00ffcc;
+    padding: 25px;
+    /* text-align: center; */
+    border-radius: 15px;
+}
+
+input, textarea, select {
+    width: 95%;
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 5px;
+    border: 2px solid #00ffcc;
+    background: black;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    font-family:'Courier New', Courier, monospace;
+}
+
+label[for="dropdown"] {
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    padding-top: 40px;
+}
+
+label[for="satisfaction"] {
+    padding-top: 40px;
+}
+
+input[type="radio"] {
+    width: fit-content;
+}
+
+label[for="useful-feature"] {
+    padding-top: 40px;
+}
+
+input[type="checkbox"] {
+    width: fit-content;
+}
+
+label[for="suggestions"] {
+    padding-top: 40px;
+}
+
+button {
+    background: #00ffcc;
+    color: black;
+    padding: 12px;
+    width: 100%;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button:hover {
+    background: #ff00ff;
+    color: white;
+    box-shadow: 0 0 10px #ff00ff;
+}
+
+
+
+
+
+
+
+
+
+
