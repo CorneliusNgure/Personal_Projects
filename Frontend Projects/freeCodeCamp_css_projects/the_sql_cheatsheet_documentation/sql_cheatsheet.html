@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Cheatsheet</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <header>SQL Cheatsheet</header>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#SELECT_Statement">SELECT Statement</a>
+        <a class="nav-link" href="#INSERT_Statement">INSERT Statement</a>
+        <a class="nav-link" href="#UPDATE_Statement">UPDATE Statement</a>
+        <a class="nav-link" href="#DELETE_Statement">DELETE Statement</a>
+        <a class="nav-link" href="#JOIN_Clauses">JOIN Clauses</a>
+        <a class="nav-link" href="#GROUP_BY">GROUP BY</a>
+        <a class="nav-link" href="#HAVING">HAVING</a>
+        <a class="nav-link" href="#INDEXES">Indexes</a>
+        <a class="nav-link" href="#Transactions">Transactions</a>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>SQL (Structured Query Language) is a standard language used for managing and manipulating relational databases. It allows users to store, retrieve, update, and delete data efficiently.</p>
+            <p>This cheatsheet provides a comprehensive guide to essential SQL commands with beginner-friendly explanations.</p>
+            <p>For more details, visit the <a href="https://dev.mysql.com/doc/" target="_blank">official SQL documentation</a>.</p>
+        </section>
+        <section class="main-section" id="SELECT_Statement">
+            <header>SELECT Statement</header>
+            <p>The <code>SELECT</code> statement is the most commonly used SQL command. It retrieves data from a database table.</p>
+            <ul>
+                <li><strong>Retrieve all columns:</strong></li>
+                <code>SELECT * FROM customers;</code>
+                <li><strong>Retrieve specific columns:</strong></li>
+                <code>SELECT name, email FROM customers;</code>
+                <li><strong>Filter results with WHERE:</strong></li>
+                <code>SELECT name, email FROM customers WHERE age > 25 ORDER BY name ASC;</code>
+            </ul>
+        </section>
+        <section class="main-section" id="INSERT_Statement">
+            <header>INSERT Statement</header>
+            <p>The <code>INSERT</code> statement is used to add new records to a database table.</p>
+            <ul>
+                <li><strong>Insert a new record:</strong></li>
+                <code>INSERT INTO customers (name, email) VALUES ('John Doe', 'john@example.com');</code>
+            </ul>
+        </section>
+        <section class="main-section" id="UPDATE_Statement">
+            <header>UPDATE Statement</header>
+            <p>The <code>UPDATE</code> statement modifies existing records in a table.</p>
+            <ul>
+                <li><strong>Update a specific record:</strong></li>
+                <code>UPDATE customers SET email = 'new@example.com' WHERE id = 1;</code>
+            </ul>
+        </section>
+        <section class="main-section" id="DELETE_Statement">
+            <header>DELETE Statement</header>
+            <p>The <code>DELETE</code> statement removes records from a table.</p>
+            <ul>
+                <li><strong>Delete a specific record:</strong></li>
+                <code>DELETE FROM customers WHERE id = 1;</code>
+            </ul>
+        </section>
+        <section class="main-section" id="JOIN_Clauses">
+            <header>JOIN Clauses</header>
+            <p>The <code>JOIN</code> clause is used to combine records from two or more tables.</p>
+            <ul>
+                <li><strong>Inner Join:</strong></li>
+                <code>SELECT orders.id, customers.name FROM orders INNER JOIN customers ON orders.customer_id = customers.id;</code>
+            </ul>
+        </section>
+        <section class="main-section" id="GROUP_BY">
+            <header>GROUP BY</header>
+            <p>The <code>GROUP BY</code> statement groups rows with the same values into summary rows.</p>
+            <code>SELECT category, COUNT(*) FROM products GROUP BY category;</code>
+        </section>
+        <section class="main-section" id="HAVING">
+            <header>HAVING</header>
+            <p>The <code>HAVING</code> clause filters grouped data.</p>
+            <code>SELECT category, COUNT(*) FROM products GROUP BY category HAVING COUNT(*) > 10;</code>
+        </section>
+        <section class="main-section" id="INDEXES">
+            <header>Indexes</header>
+            <p>Indexes improve query performance.</p>
+            <code>CREATE INDEX idx_customer_name ON customers (name);</code>
+        </section>
+        <section class="main-section" id="Transactions">
+            <header>Transactions</header>
+            <p>Transactions ensure data integrity.</p>
+            <code>BEGIN;
+UPDATE accounts SET balance = balance - 100 WHERE id = 1;
+UPDATE accounts SET balance = balance + 100 WHERE id = 2;
+COMMIT;</code>
+        </section>
+    </main>
+</body>
+</html>
