@@ -78,4 +78,22 @@
   #result.show {
     transform: translateX(0);
     opacity: 1;
+    animation: slideBounce 0.8s ease forwards;
+      }
+    
+      @keyframes slideBounce {
+        0% {
+          transform: translateX(-150%);
+          opacity: 0;
+        }
+        60% {
+          transform: translateX(20%);
+          opacity: 1;
+        }
+        80% {
+          transform: translateX(-10%);
+        }
+        100% {
+          transform: translateX(0);
+        }
   }
