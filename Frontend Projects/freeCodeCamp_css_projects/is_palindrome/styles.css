@@ -97,3 +97,19 @@
           transform: translateX(0);
         }
   }
+
+  #result.not-palindrome {
+    animation: fadeInSad 0.8s ease forwards;
+  }
+  
+  @keyframes fadeInSad {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
