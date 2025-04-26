@@ -21,17 +21,25 @@ const animateResult = (inputValue, isPalin) => {
     firstPart.style.opacity = '0';
     firstPart.style.transition = 'opacity 0.8s ease';
 
+    const notWord = document.createElement('span');
+    notWord.textContent = 'NOT';
+    notWord.classList.add('glitch-word');
+    notWord.style.opacity = '0';
+    notWord.style.transition = 'opacity 0.8s ease 2s'; // 2 sec delay
+
     const secondPart = document.createElement('span');
-    secondPart.textContent = 'NOT a palindrome.';
+    secondPart.textContent = ' a palindrome.';
     secondPart.style.opacity = '0';
-    secondPart.style.transition = 'opacity 0.8s ease 2s';
+    secondPart.style.transition = 'opacity 0.8s ease 2s'; // 2 sec delay to match
 
     result.appendChild(firstPart);
+    result.appendChild(notWord);
     result.appendChild(secondPart);
 
     void result.offsetWidth;
 
     firstPart.style.opacity = '1';
+    notWord.style.opacity = '1';
     secondPart.style.opacity = '1';
 
     void result.offsetWidth;
